@@ -1,0 +1,19 @@
+<xsd:schema targetNamespace="http://types.example.org" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="InputType">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="request" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="OutputType">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="response" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>
