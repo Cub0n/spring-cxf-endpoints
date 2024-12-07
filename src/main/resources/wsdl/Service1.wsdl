@@ -4,7 +4,7 @@
   xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
   xmlns:nslt="http://types.example.org">
 
-  <wsdl:import namespace="http://types.example.org" location="Service.xsd"></wsdl:import>
+  <wsdl:import namespace="http://types.example.org" location="Service.xsd"/>
 
   <wsdl:message name="NewOperationRequest">
     <wsdl:part element="nslt:InputType" name="input"/>

@@ -14,12 +14,11 @@ import service.IService1;
 @Service
 @WebServiceEndpoint("/service1")
 public class Service1 implements IService1 {
-
-
+  
   private final Registration registration;
 
   private final Handler handler;
-  
+
   public Service1(Registration registration, Handler handler) {
     this.registration = registration;
     this.handler = handler;

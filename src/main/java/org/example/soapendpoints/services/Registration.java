@@ -11,7 +11,7 @@ public class Registration {
 
   private final ApplicationContext applicationContext;
 
-  private final Map<Class, Object> registration = new ConcurrentHashMap<>();
+  private final Map<Class<?>, Object> registration = new ConcurrentHashMap<>();
 
   public Registration(ApplicationContext applicationContext) {
     this.applicationContext = applicationContext;
@@ -33,7 +33,7 @@ public class Registration {
   public <T> T getRegisteredObject(Class<T> clazzDesc) {
     return switch (registration.get(clazzDesc)) {
       case null -> null;
-      case Class clazz -> clazzDesc.cast(applicationContext.getBean(clazz));
+      case Class<?> clazz -> clazzDesc.cast(applicationContext.getBean(clazz));
       case Object obj -> clazzDesc.cast(obj);
     };
   }
